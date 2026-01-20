@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ギフト送ると音が鳴るよ</title>
+<style>
+/* ローカルフォント読み込み */
+@font-face {
+  font-family: 'Keifont';
+  src: url('Keifont.ttf') format('truetype');
+}
+
+body {
+  background-color: rgba(0,0,0,0.5);
+  font-family: 'Keifont', Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 横スクロール */
+.all-groups {
+  display: flex;
+  gap: 15px;
+  min-width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* 半分ずらしてループ */
+}
+
+/* グループ共通 */
+.group {
+  min-width: 200px;
+  padding:12px;
+  border-radius: 12px;
+  border: 2px solid;
+}
+
+/* 見出し */
+.group h2 {
+  margin: 10px 0;
+  padding: 8px 0;
+  text-align: center;
+}
+
+/* ギフト2列 */
+.gift-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* ギフトアイテム */
+.gift-item {
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 6px;
+  line-height: 1.4;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.gift-item strong,
+.gift-item span {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: white; 
+}
+
+.gift-item span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* 光るアニメーション */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(0,0,0,0.3); }
+  100% { box-shadow: 0 0 12px rgba(0,0,0,0.8); }
+}
+
+/* グループ色 */
+.group.light { border-color:#7fd1ff; background: rgba(127,209,255,0.2); }
+.group.normal { border-color:#aaff7f; background: rgba(170,255,127,0.2); }
+.group.strong { border-color:#ff7f7f; background: rgba(255,127,127,0.2); }
+.group.special { border-color:#d37fff; background: rgba(211,127,255,0.2); }
+.group.ultra { border-color:#ffd700; background: rgba(255,215,0,0.2); }
+</style>
+</head>
+<body>
+
+<h1>ギフト贈ると音が鳴るよ</h1>
+
+<div class="all-groups">
+
+  <!-- 1回目 -->
+  <div class="group light">
+    <h2>🌹軽妨害🌹</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>フォロー</strong><span>FAHHHHHHHHHH!</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group normal">
+    <h2>💐通常妨害💐</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>バラ</strong><span>paypay</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group strong">
+    <h2>🔥強妨害🔥</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>ニャオ</strong><span>デデドン</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group special">
+    <h2>✨演出✨</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>ローザ</strong><span>うんち！</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group ultra">
+    <h2>🌈特別演出🌈</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>カラフルな翼</strong><span>音割れトーマス</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <!-- 2回目（コピーしてループ） -->
+   <div class="group light">
+    <h2>🌹軽妨害🌹</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>フォロー</strong><span>FAHHHHHHHHHH!</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group normal">
+    <h2>💐通常妨害💐</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>バラ</strong><span>Paypay</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group strong">
+    <h2>🔥強妨害🔥</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>ニャオ</strong><span>デデドン</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group special">
+    <h2>✨演出✨</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>ローザ</strong><span>うんち！</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group ultra">
+    <h2>🌈特別演出🌈</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>カラフルな翼</strong><span>音割れトーマス</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+  <div class="group light">
+    <h2>🌹軽妨害🌹</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>フォロー</strong><span>FAHHHHHHHHHH!</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group normal">
+    <h2>💐通常妨害💐</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>バラ</strong><span>paypay</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group strong">
+    <h2>🔥強妨害🔥</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>ニャオ</strong><span>デデドン</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group special">
+    <h2>✨演出✨</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>ローザ</strong><span>うんち！</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+  <div class="group ultra">
+    <h2>🌈特別演出🌈</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><strong>カラフルな翼</strong><span>音割れトーマス</span></div>
+      <div class="gift-item"><strong></strong><span></span></div>
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+</html>
